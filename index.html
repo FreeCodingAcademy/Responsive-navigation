@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"/>    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <label class="btn">
+            <i id="btn" class="fas fa-bars"></i>
+        </label>
+        <label class="user-img">
+            <img src="assets/a.jpg" alt="">
+        </label>
+        <label class="user-name">
+            <p>david chrish</p>
+        </label>
+        <div id="responsiveContainer" class="responsive-container">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">skills</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <div class="icons">
+                <i class="fab fa-codepen"></i>
+                <i class="fab fa-github"></i>
+                <i class="fab fa-stack-overflow"></i>
+            </div>
+        </div>
+    </nav>
+    <script>
+        var button =document.getElementById("btn");
+        var responsiveContainer = document.getElementById("responsiveContainer");
+        var hidden = true;
+
+        button.onclick = function(){
+            if(hidden){
+                responsiveContainer.style.left = "0%";
+                hidden = false;
+            }else{
+                responsiveContainer.style.left = "100%";
+                hidden = true;
+            }
+        }
+    </script>
+</body>
+</html>
